@@ -5,6 +5,7 @@
 	<meta name="author" content="Natalia Łachacz">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Alecto</title>
+	<link rel="shortcut icon" href="img/ico.png">
 	
 	<link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=latin-ext" rel="stylesheet">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
@@ -16,6 +17,7 @@
 		<header>		
 			<nav>
 				<img src="img/logo.png" alt="logo-img">
+				
 				<ul>
 					<li>Home</li>
 					<li>About</li>
@@ -28,13 +30,15 @@
 			</nav>
 			
 			<div id="header__slider">
-				<h1>Alecto is simply PSD Template</h1>
-				<p>Nam varius accumsan elementum aliquam</p>
+				<div>
+					<h1><span>Alecto</span> is simply PSD Template</h1>
+					<p>Nam varius accumsan elementum aliquam</p>
+				</div>
 			</div>
 			
-			<button class="button--border">Learn more</button>
+			<a href=""><button class="button--border">Learn more</button></a>
 			
-			<i class="fas fa-angle-down"></i>
+			<a href="#about-us"><i class="fas fa-angle-down"></i></a>
 		</header>
 <!-- <---------------------------------------- ABOUT-US -------------------------------------->		
 		<section id="about-us">
@@ -65,22 +69,23 @@
 				</div>
 			</div>
 			
-			<button class="button--color">Learn more</button>			
+			<a href=""><button class="button--color">Learn more</button></a>			
 		</section>
 <!-- <---------------------------------------- FRAMES_INFO -------------------------------------->		
 		<section id="frames">
 			<div id="frame1">
+				<div class="frame__photo">
+					<img src="https://source.unsplash.com/-wf9s-G5mU4" alt="laptop">
+				</div>
+				
 				<div class="frame__info">
 					<h2>Lorem ipsum</h2>
 					<p>
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque elementum augue sed est porttitor, ac blandit nisl posuere. Pellentesque hendrerit suscipit mi eu lobortis. Curabitur consectetur enim id elementum accumsan. Quisque metus purus, iaculis id tincidunt non, blandit quis sapien. 
 					</p>
+					
+					<a href=""><button class="button--color">Learn more</button></a>
 				</div>
-				<div class="frame__photo">
-					<img src="https://source.unsplash.com/lAiKIsu-P_s" alt="camera">
-				</div>
-				
-				<button class="button--color">Learn more</button>
 			</div>
 			
 			<div id="frame2">
@@ -89,25 +94,24 @@
 					<p>
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque elementum augue sed est porttitor, ac blandit nisl posuere. Pellentesque hendrerit suscipit mi eu lobortis. Curabitur consectetur enim id elementum accumsan. Quisque metus purus, iaculis id tincidunt non, blandit quis sapien. 
 					</p>
+					
+					<a href=""><button class="button--color">Learn more</button></a>
 				</div>				
 				<div class="frame__photo">
-					<img src="https://source.unsplash.com/-wf9s-G5mU4" alt="laptop">
+					<img src="https://source.unsplash.com/kPOia9E2dNI" alt="camera">
 				</div>
-				
-				<button class="button--color">Learn more</button>
 			</div>			
 		</section>
-<!-- <---------------------------------------- OPINIONS -------------------------------------->				
-		<section id="opinions">
+<!-- <---------------------------------------- OPINIONS -------------------------------------->					<section id="opinions">
 			<div id="opinions__slider">
 				<img src="img/ceo.png" alt="CEO-photo">
-				<h3>Alecto lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
+				<h3><span>Alecto</span> lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
 				<span>Adam Czajkowski, CEO&Founder at symu.co</span>
 			</div>
 		</section>
 <!-- <---------------------------------------- SERVICES -------------------------------------->		
-		<section id="sevices">
-			<h2></h2>
+		<section id="services">
+			<h2>Our services</h2>
 			<div class="underline"></div>
 			<p>Nam varius accumsan elementum. Aliquam fermentum eros in suscipit scelerisque.</p>				
 			
@@ -227,7 +231,7 @@
 				<h2>Dolor sit amet</h2>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque elementum augue sed est porttitor, ac blandit nisl posuere. Pellentesque hendrerit suscipit mi eu lobortis. Curabitur consectetur enim id elementum accumsan. Quisque metus purus, iaculis id tincidunt non, blandit quis sapien. </p>
 
-				<button class="button--color">Learn more</button>
+				<a href=""><button class="button--color">Learn more</button></a>
 			</div>
 			
 			<div class="map__section">
@@ -242,7 +246,7 @@
 				<input type="text" name="name" placeholder="Your name"><br>
 				<input type="text" name="subject" placeholder="Subject of message"><br>
 				<textarea name="message" rows="10" cols="30" placeholder="Write your message"></textarea><br>
-				<input type="submit" name="submit" value="Submit">
+				<input type="submit" name="submit" value="Submit" class="button--color">
 			</form>
 		</section>
 <!-- <---------------------------------------- FOOTER -------------------------------------->											

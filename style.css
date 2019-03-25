@@ -6,6 +6,258 @@
   vertical-align: baseline;
   text-decoration: none;
   outline: 0;
+  list-style-type: none;
+}
+
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("ProximaNova_Thin.otf");
+  src: url("ProximaNova_Light.otf");
+  src: url("ProximaNova_Regular.otf");
+}
+html {
+  scroll-behavior: smooth;
+}
+
+header {
+  background-image: url(img/photo.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  color: white;
+  height: 100vh;
+}
+header i {
+  font-size: 50px;
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%);
+  color: white;
+}
+header button {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+nav {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+  padding: 50px 200px;
+}
+
+ul {
+  display: flex;
+}
+
+li {
+  padding: 0 25px;
+  text-transform: uppercase;
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+#header__slider {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%);
+  text-align: center;
+}
+#header__slider h1 {
+  font-family: "Raleway", sans-serif;
+  font-weight: lighter;
+  font-size: 60px;
+}
+#header__slider h1 span {
+  font-weight: bold;
+}
+#header__slider p {
+  font-family: "Proxima Nova", sans-serif;
+  font-weight: 200;
+  font-size: 24px;
+  color: white;
+}
+
+#about-us {
+  padding: 100px;
+  text-align: center;
+}
+#about-us__icons {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+#about-us__icons h3 {
+  font-family: "Raleway", sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.about-us__icon h3 {
+  padding: 80px 0 40px 0;
+}
+
+h2 {
+  font-family: "Raleway", sans-serif;
+  font-size: 60px;
+  font-weight: 200;
+  color: #576671;
+}
+
+p {
+  font-family: "Proxima Nova", sans-serif;
+  color: #87949e;
+  font-size: 18px;
+  padding: 0 0 100px 0;
+}
+
+.underline {
+  height: 1px;
+  width: 30px;
+  background-color: #17daa3;
+  margin: 40px auto;
+}
+
+.button--color {
+  background-color: #17daa3;
+  border-radius: 30px;
+  padding: 15px 50px;
+  color: white;
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.button--border {
+  border: 2px solid white;
+  border-radius: 30px;
+  background-color: transparent;
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  color: white;
+  cursor: pointer;
+  padding: 15px 50px;
+}
+
+#frame1 {
+  padding: 150px 250px;
+  background-color: #f9f9fa;
+  display: grid;
+  grid-template-areas: "photo info";
+}
+
+#frame2 {
+  padding: 150px 250px;
+  background-color: white;
+  display: grid;
+  grid-template-areas: "info photo";
+}
+#frame2 .frame__info {
+  text-align: right;
+}
+
+.frame__photo {
+  grid-area: photo;
+}
+.frame__photo img {
+  width: 40vw;
+}
+
+.frame__info {
+  grid-area: info;
+}
+.frame__info h2 {
+  padding-bottom: 70px;
+}
+
+#opinions {
+  background-image: url(img/photo2.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  padding: 150px 0;
+  color: white;
+}
+#opinions h3 {
+  font-family: "Raleway", sans-serif;
+  font-size: 30px;
+  font-weight: 300;
+  padding: 30px 0;
+}
+#opinions h3 span {
+  color: #17daa3;
+  font-size: 30px;
+}
+#opinions span {
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+#services {
+  text-align: center;
+  background-color: #f9f9fa;
+  padding: 100px 250px;
+}
+#services__sections {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.services__section {
+  text-align: left;
+  display: grid;
+  grid-template-areas: "ico title" "ico describe";
+}
+.services__section img {
+  grid-area: ico;
+  padding-right: 50px;
+}
+.services__section h2 {
+  grid-area: title;
+  padding-bottom: 40px;
+}
+.services__section p {
+  grid-area: describe;
+}
+
+#team {
+  text-align: center;
+  padding: 100px 0 0 0;
+}
+
+#tiles {
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  overflow: hidden;
+}
+
+.tiles__element {
+  background-color: #f9f9fa;
+  width: 20vw;
+  height: 20vw;
+}
+
+.tiles__element:nth-child(even) {
+  background-color: #e4e4e4;
+}
+
+#pricing {
+  text-align: center;
+  background-color: #f9f9fa;
+  padding: 100px 0;
+  /*&__container {
+  	display: grid;
+  	grid-template-columns: reapete(4, auto);
+  	}*/
 }
 
 /*# sourceMappingURL=style.css.map */
