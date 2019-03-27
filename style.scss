@@ -25,6 +25,7 @@ $grey: #576671;
 $light_g: #87949e;
 $mint: #17daa3;
 $dark-g: #f9f9fa;
+$gray: #ced3d7;
 
 html {
 	scroll-behavior: smooth;
@@ -57,8 +58,7 @@ header {
 }
 
 nav {
-	display: grid;
-	grid-template-columns: auto auto;
+	display: flex;
 	justify-content: space-between;
 	padding: 50px 200px;
 }
@@ -284,10 +284,122 @@ p {
 #pricing {
 	text-align: center;
 	background-color: $dark-g;
-	padding: 100px 0;
-	
-	/*&__container {
-		display: grid;
-		grid-template-columns: reapete(4, auto);
-		}*/
+	padding: 100px 250px;
 }
+
+#pricing__container {
+	display: grid;
+	grid-template-columns: repeat(4, auto);
+}
+
+.price {
+	text-align: left;
+	background-color: white;
+	margin: 0 15px;
+	padding: 50px 30px;
+	
+	h4 {
+		font-family: $raleway;
+		font-weight: 100;
+		color: $mint;
+		font-size: 60px;
+	}
+	
+	&__license {
+		color: $gray;
+		padding: 15px 0 60px 0;
+	}
+	
+	&__description {
+		padding: 60px 0;
+		border-width: 1px 0 0 0;
+		border-style: solid;
+		border-color: #eeeff1;
+	}
+	
+	&__purchase {
+		background-color: $mint;
+		padding: 20px;
+		text-transform: uppercase;
+		font-family: $proxima;
+		font-weight: bold;
+		font-size: 18px;
+		display: flex;
+		justify-content: space-between;
+		align-content: center;
+		
+		img {
+			max-height: 18px;
+			max-width: 19px;
+		}
+		
+		p {
+			padding: 0;
+			color: white;
+		}
+	}
+}
+
+#map {
+	display: grid;
+	grid-template-columns: auto auto;
+	padding: 100px 0 100px 250px;
+	grid-gap: 50px;
+	justify-content: center;
+	
+	p {
+		padding: 70px 0;
+	}
+}
+
+.map__section {
+	display: grid;
+	align-content: center;
+}
+
+#contact {
+	text-align: center;
+	background-image: url(img/photo3.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: 100px 250px;
+	
+	h2 {
+		color: white;
+	}
+	
+	input, textarea {
+		padding: 20px;
+		margin: 15px 0;
+		width: 30vw;
+	}
+	
+	.form__button {
+		background-color: $mint;
+		border-radius: 30px;
+		padding: 15px 50px;
+		color: white;
+		font-family: $raleway;
+		font-weight: bold;
+		font-size: 14px;
+		cursor: pointer;
+		width: 10vw;
+	}
+}
+
+footer {
+	display: flex;
+	justify-content: space-between;
+	align-content: center;
+	padding: 100px 250px;
+	color: $light-g;
+	text-transform: uppercase;
+	font-family: $raleway;
+	
+	.name--color {
+		color: $mint;
+		border-bottom: 2px dotted $mint;
+	}
+}
+
