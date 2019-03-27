@@ -9,16 +9,17 @@
 	list-style-type: none;
 }
 
-@font-face {
-	font-family: 'Proxima Nova';
-	src: url('ProximaNova_Thin.otf');
-	src: url('ProximaNova_Light.otf');
-	src: url('ProximaNova_Regular.otf');	
-}
+/*@font-face {
+	font-family: 'montserrat Nova';
+	src: url('montserratNova_Thin.otf');
+	src: url('montserratNova_Light.otf');
+	//src: url('montserratNova_Regular.otf');
+	//src: url('montserrat-Nova-Regular.otf');
+}*/
 
 //variables
 
-$proxima: 'Proxima Nova', sans-serif;
+$montserrat: 'Montserrat', sans-serif;
 $raleway: 'Raleway', sans-serif;
 
 $grey: #576671;
@@ -26,9 +27,25 @@ $light_g: #87949e;
 $mint: #17daa3;
 $dark-g: #f9f9fa;
 $gray: #ced3d7;
+$hover_mint: #0ecf98;
 
 html {
 	scroll-behavior: smooth;
+	letter-spacing: 0.025em;
+}
+
+#myBtn {
+	display: none;
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	z-index: 99;
+	width: 70px;
+	height: 70px;
+	background-color: $mint;
+	color: white;
+	cursor: pointer;
+	font-size: 40px;
 }
 
 header {
@@ -55,12 +72,34 @@ header {
 		left: 50%;
 		transform: translate(-50%);
 	}
+	
+	a {
+		color: white;
+		display: inline-block;
+	}
+	
+	a::after {
+		content: '';
+		display: block;
+		width: 0;
+		height: 2px;
+		background: $mint;
+		transition: width .3s;
+	}
+	
+	a:hover::after {
+		width: 100%;
+	}
 }
 
 nav {
 	display: flex;
 	justify-content: space-between;
 	padding: 50px 200px;
+	
+	.logo__link::after {
+		display: none;
+	}
 }
 
 ul {
@@ -93,8 +132,8 @@ li {
 	}
 	
 	p {
-		font-family: $proxima;
-		font-weight: 200;
+		font-family: $montserrat;
+		font-weight: 300;
 		font-size: 24px;
 		color: white;
 	}
@@ -120,6 +159,10 @@ li {
 	h3 {
 		padding: 80px 0 40px 0;
 	}
+	
+	p {
+		line-height: 30px;
+	}
 }
 
 h2 {
@@ -130,7 +173,7 @@ h2 {
 }
 
 p {
-	font-family: $proxima;
+	font-family: $montserrat;
 	color: $light_g;
 	font-size: 18px;
 	padding: 0 0 100px 0;
@@ -152,6 +195,11 @@ p {
 	font-weight: bold;
 	font-size: 14px;
 	cursor: pointer;
+	transition: 0.3s;
+}
+
+.button--color:hover {
+	background-color: $hover_mint;
 }
 
 .button--border {
@@ -164,6 +212,12 @@ p {
 	color: white;
 	cursor: pointer;
 	padding: 15px 50px;
+	transition: 0.5s;
+}
+
+.button--border:hover {
+	background-color: white;
+	color: #0B1D1E;
 }
 
 #frame1 {
@@ -197,6 +251,10 @@ p {
 	
 	h2 {
 		padding-bottom: 70px;
+	}
+	
+	p {
+		line-height: 36px;
 	}
 }
 
@@ -257,6 +315,7 @@ p {
 
 	p {
 		grid-area: describe;
+		line-height: 48px;
 	}
 }
 
@@ -281,6 +340,27 @@ p {
 	background-color: #e4e4e4;
 }
 
+.overlay {
+	width: 100%;
+	height: 100%;
+	background-color: $mint;
+	opacity: 0;
+	transition: opacity 1s;	
+	display: grid;
+		
+	&__text {
+		color: white;
+		font-size: 36px;
+		margin: auto 0;
+		font-family: $raleway;
+		font-weight: 200;
+	}
+}
+
+.overlay:hover {
+	opacity: 1;
+}
+
 #pricing {
 	text-align: center;
 	background-color: $dark-g;
@@ -296,7 +376,7 @@ p {
 	text-align: left;
 	background-color: white;
 	margin: 0 15px;
-	padding: 50px 30px;
+	padding: 50px 40px;
 	
 	h4 {
 		font-family: $raleway;
@@ -315,28 +395,37 @@ p {
 		border-width: 1px 0 0 0;
 		border-style: solid;
 		border-color: #eeeff1;
+		line-height: 48px;
 	}
 	
 	&__purchase {
 		background-color: $mint;
-		padding: 20px;
+		padding: 20px 35px;
 		text-transform: uppercase;
-		font-family: $proxima;
+		font-family: $montserrat;
 		font-weight: bold;
 		font-size: 18px;
 		display: flex;
 		justify-content: space-between;
 		align-content: center;
+		margin: 0 -40px -50px -40px;
+		transition: 0.3s;
+		letter-spacing: 0.2em;
 		
 		img {
 			max-height: 18px;
 			max-width: 19px;
+			margin: auto 0;
 		}
 		
 		p {
 			padding: 0;
 			color: white;
 		}
+	}
+	
+	&__purchase:hover {
+		background-color: $hover_mint;
 	}
 }
 
@@ -349,6 +438,7 @@ p {
 	
 	p {
 		padding: 70px 0;
+		line-height: 36px;
 	}
 }
 
@@ -373,6 +463,8 @@ p {
 		padding: 20px;
 		margin: 15px 0;
 		width: 30vw;
+		font-family: $raleway;
+		font-size: 15px;
 	}
 	
 	.form__button {
@@ -385,7 +477,12 @@ p {
 		font-size: 14px;
 		cursor: pointer;
 		width: 10vw;
+		
+		&:hover {
+			background-color: $hover_mint;
+		}
 	}
+	
 }
 
 footer {
@@ -399,7 +496,24 @@ footer {
 	
 	.name--color {
 		color: $mint;
-		border-bottom: 2px dotted $mint;
+	}
+	
+	a {
+		color: $light-g;
+		display: inline-block;
+	}
+	
+	a::after {
+		content: '';
+		display: block;
+		width: 0;
+		height: 2px;
+		background: $mint;
+		transition: width .3s;
+	}
+	
+	a:hover::after {
+		width: 100%;
 	}
 }
 

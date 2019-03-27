@@ -8,23 +8,26 @@
 	<link rel="shortcut icon" href="img/ico.png">
 	
 	<link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=latin-ext" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> 
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<link rel="stylesheet" href="src/animate.css">
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 	<div id="container">
+	 <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-angle-up"></i></button> 
 <!-- <---------------------------------------- HEADER -------------------------------------->	
 		<header>		
 			<nav>
-				<img src="img/logo.png" alt="logo-img">
+				<a class="logo__link" href="index.html"><img src="img/logo.png" alt="logo-img"></a>
 				
 				<ul>
-					<li>Home</li>
-					<li>About</li>
-					<li>Work</li>
-					<li>Services</li>
-					<li>Team</li>
-					<li>Contact</li>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="#about-us">About</a></li>
+					<li><a href="#frames">Work</a></li>
+					<li><a href="#services">Services</a></li>
+					<li><a href="#team">Team</a></li>
+					<li><a href="#contact">Contact</a></li>
 					<li><img src="img/search.png" alt="search-icon"></li>
 				</ul>
 			</nav>
@@ -78,7 +81,7 @@
 					<img src="https://source.unsplash.com/-wf9s-G5mU4" alt="laptop">
 				</div>
 				
-				<div class="frame__info">
+				<div class="frame__info wow fadeInRight">
 					<h2>Lorem ipsum</h2>
 					<p>
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque elementum augue sed est porttitor, ac blandit nisl posuere. Pellentesque hendrerit suscipit mi eu lobortis. Curabitur consectetur enim id elementum accumsan. Quisque metus purus, iaculis id tincidunt non, blandit quis sapien. 
@@ -89,7 +92,7 @@
 			</div>
 			
 			<div id="frame2">
-				<div class="frame__info">
+				<div class="frame__info wow fadeInLeft">
 					<h2>Dolor sit amet</h2>
 					<p>
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque elementum augue sed est porttitor, ac blandit nisl posuere. Pellentesque hendrerit suscipit mi eu lobortis. Curabitur consectetur enim id elementum accumsan. Quisque metus purus, iaculis id tincidunt non, blandit quis sapien. 
@@ -116,25 +119,25 @@
 			<p>Nam varius accumsan elementum. Aliquam fermentum eros in suscipit scelerisque.</p>				
 			
 			<div id="services__sections">
-				<div class="services__section">
+				<div class="services__section wow zoomIn">
 					<img src="img/service1.png" alt="services-photo">
 					
 					<h2>Portfolio</h2>
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque elementum augue sed est porttitor, ac blandit nisl posuere.</p>
 				</div>
-				<div class="services__section">
+				<div class="services__section wow zoomIn">
 					<img src="img/service2.png" alt="services-photo">
 					
 					<h2>Design</h2>
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque elementum augue sed est porttitor, ac blandit nisl posuere.</p>
 				</div>
-				<div class="services__section">
+				<div class="services__section wow zoomIn">
 					<img src="img/service3.png" alt="services-photo">
 					
 					<h2>Branding</h2>
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque elementum augue sed est porttitor, ac blandit nisl posuere.</p>
 				</div>
-				<div class="services__section">
+				<div class="services__section wow zoomIn">
 					<img src="img/service4.png" alt="services-photo">
 					
 					<h2>Development</h2>
@@ -149,16 +152,56 @@
 			<p>Nam varius accumsan elementum. Aliquam fermentum eros in suscipit scelerisque.</p>
 			
 			<div id="tiles">
-				<div class="tiles__element"></div>
-				<div class="tiles__element"></div>
-				<div class="tiles__element"></div>
-				<div class="tiles__element"></div>
-				<div class="tiles__element"></div>
-				<div class="tiles__element"></div>
-				<div class="tiles__element"></div>
-				<div class="tiles__element"></div>
-				<div class="tiles__element"></div>
-				<div class="tiles__element"></div>
+				<div class="tiles__element">
+					<div class="overlay">
+						<div class="overlay__text">John Doe</div>
+					</div>
+				</div>
+				<div class="tiles__element">
+					<div class="overlay">
+						<div class="overlay__text">John Doe</div>
+					</div>					
+				</div>
+				<div class="tiles__element">
+					<div class="overlay">
+						<div class="overlay__text">John Doe</div>
+					</div>					
+				</div>
+				<div class="tiles__element">
+					<div class="overlay">
+						<div class="overlay__text">John Doe</div>
+					</div>					
+				</div>
+				<div class="tiles__element">
+					<div class="overlay">
+						<div class="overlay__text">John Doe</div>
+					</div>					
+				</div>
+				<div class="tiles__element">
+					<div class="overlay">
+						<div class="overlay__text">John Doe</div>
+					</div>					
+				</div>
+				<div class="tiles__element">
+					<div class="overlay">
+						<div class="overlay__text">John Doe</div>
+					</div>					
+				</div>
+				<div class="tiles__element">
+					<div class="overlay">
+						<div class="overlay__text">John Doe</div>
+					</div>					
+				</div>
+				<div class="tiles__element">
+					<div class="overlay">
+						<div class="overlay__text">John Doe</div>
+					</div>					
+				</div>
+				<div class="tiles__element">
+					<div class="overlay">
+						<div class="overlay__text">John Doe</div>
+					</div>					
+				</div>
 			</div>
 		</section>
 <!-- <---------------------------------------- PRICING -------------------------------------->			
@@ -176,10 +219,10 @@
 					Lorem ipsum dolor sit amet consectetur adipiscing elit Ante sed interdum labortis Est nisi efficitur lactus
 					</p>
 					
-					<div class="price__purchase">
+					<a href=""><div class="price__purchase">
 						<p>purchase</p>
 						<img src="img/shop.png" alt="purchase-icon">
-					</div>
+					</div></a>
 				</div>
 				
 				<div class="price">
@@ -190,10 +233,10 @@
 					Lorem ipsum dolor sit amet consectetur adipiscing elit Ante sed interdum labortis Est nisi efficitur lactus
 					</p>
 					
-					<div class="price__purchase">
+					<a href=""><div class="price__purchase">
 						<p>purchase</p>
 						<img src="img/shop.png" alt="purchase-icon">
-					</div>
+					</div></a>
 				</div>
 				
 				<div class="price">
@@ -204,10 +247,10 @@
 					Lorem ipsum dolor sit amet consectetur adipiscing elit Ante sed interdum labortis Est nisi efficitur lactus
 					</p>
 					
-					<div class="price__purchase">
+					<a href=""><div class="price__purchase">
 						<p>purchase</p>
 						<img src="img/shop.png" alt="purchase-icon">
-					</div>
+					</div></a>
 				</div>
 				
 				<div class="price">
@@ -218,16 +261,16 @@
 					Lorem ipsum dolor sit amet consectetur adipiscing elit Ante sed interdum labortis Est nisi efficitur lactus
 					</p>
 					
-					<div class="price__purchase">
+					<a href=""><div class="price__purchase">
 						<p>purchase</p>
 						<img src="img/shop.png" alt="purchase-icon">
-					</div>
+					</div></a>
 				</div>
 			</div>
 		</section>
 <!-- <---------------------------------------- MAP -------------------------------------->				
 		<section id="map">
-			<div class="map__section">
+			<div class="map__section wow fadeInLeft">
 				<h2>Dolor sit amet</h2>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque elementum augue sed est porttitor, ac blandit nisl posuere. Pellentesque hendrerit suscipit mi eu lobortis. Curabitur consectetur enim id elementum accumsan. Quisque metus purus, iaculis id tincidunt non, blandit quis sapien. </p>
 
@@ -253,21 +296,27 @@
 		</section>
 <!-- <---------------------------------------- FOOTER -------------------------------------->					<footer>
 			<div id="footer__copyright">
-				<span>Copyright &copy; 2019 <span class="name--color">Natalia Łachacz</span></span><br>
-<!--				<span>Design  Alecto</span>-->
+				<span>Copyright &copy; 2019 <a href="https://github.com/NataliaLachacz"><span class="name--color">Natalia Łachacz</span></a></span>
 			</div>
 			
 			<div id="footer__menu">
 				<ul>
-					<li>Home</li>
-					<li>About</li>
-					<li>Work</li>
-					<li>Services</li>
-					<li>Team</li>
-					<li>Contact</li>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="#about-us">About</a></li>
+					<li><a href="#frames">Work</a></li>
+					<li><a href="#services">Services</a></li>
+					<li><a href="#team">Team</a></li>
+					<li><a href="#contact">Contact</a></li>
 				</ul>
 			</div>
 		</footer>
 	</div>
+<!-- <---------------------------------------- SCRIPTS -------------------------------------->	
+	<script src="js/script.js"></script>
+	<script src="js/wow.min.js"></script>
+		<script>
+			new WOW().init();
+		</script>	
+	
 </body>
 </html>

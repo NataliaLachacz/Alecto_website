@@ -9,14 +9,30 @@
   list-style-type: none;
 }
 
-@font-face {
-  font-family: "Proxima Nova";
-  src: url("ProximaNova_Thin.otf");
-  src: url("ProximaNova_Light.otf");
-  src: url("ProximaNova_Regular.otf");
-}
+/*@font-face {
+	font-family: 'montserrat Nova';
+	src: url('montserratNova_Thin.otf');
+	src: url('montserratNova_Light.otf');
+	//src: url('montserratNova_Regular.otf');
+	//src: url('montserrat-Nova-Regular.otf');
+}*/
 html {
   scroll-behavior: smooth;
+  letter-spacing: 0.025em;
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  width: 70px;
+  height: 70px;
+  background-color: #17daa3;
+  color: white;
+  cursor: pointer;
+  font-size: 40px;
 }
 
 header {
@@ -42,11 +58,29 @@ header button {
   left: 50%;
   transform: translate(-50%);
 }
+header a {
+  color: white;
+  display: inline-block;
+}
+header a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #17daa3;
+  transition: width 0.3s;
+}
+header a:hover::after {
+  width: 100%;
+}
 
 nav {
   display: flex;
   justify-content: space-between;
   padding: 50px 200px;
+}
+nav .logo__link::after {
+  display: none;
 }
 
 ul {
@@ -77,8 +111,8 @@ li {
   font-weight: bold;
 }
 #header__slider p {
-  font-family: "Proxima Nova", sans-serif;
-  font-weight: 200;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
   font-size: 24px;
   color: white;
 }
@@ -100,6 +134,9 @@ li {
 .about-us__icon h3 {
   padding: 80px 0 40px 0;
 }
+.about-us__icon p {
+  line-height: 30px;
+}
 
 h2 {
   font-family: "Raleway", sans-serif;
@@ -109,7 +146,7 @@ h2 {
 }
 
 p {
-  font-family: "Proxima Nova", sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: #87949e;
   font-size: 18px;
   padding: 0 0 100px 0;
@@ -131,6 +168,11 @@ p {
   font-weight: bold;
   font-size: 14px;
   cursor: pointer;
+  transition: 0.3s;
+}
+
+.button--color:hover {
+  background-color: #0ecf98;
 }
 
 .button--border {
@@ -143,6 +185,12 @@ p {
   color: white;
   cursor: pointer;
   padding: 15px 50px;
+  transition: 0.5s;
+}
+
+.button--border:hover {
+  background-color: white;
+  color: #0B1D1E;
 }
 
 #frame1 {
@@ -174,6 +222,9 @@ p {
 }
 .frame__info h2 {
   padding-bottom: 70px;
+}
+.frame__info p {
+  line-height: 36px;
 }
 
 #opinions {
@@ -226,6 +277,7 @@ p {
 }
 .services__section p {
   grid-area: describe;
+  line-height: 48px;
 }
 
 #team {
@@ -249,6 +301,26 @@ p {
   background-color: #e4e4e4;
 }
 
+.overlay {
+  width: 100%;
+  height: 100%;
+  background-color: #17daa3;
+  opacity: 0;
+  transition: opacity 1s;
+  display: grid;
+}
+.overlay__text {
+  color: white;
+  font-size: 36px;
+  margin: auto 0;
+  font-family: "Raleway", sans-serif;
+  font-weight: 200;
+}
+
+.overlay:hover {
+  opacity: 1;
+}
+
 #pricing {
   text-align: center;
   background-color: #f9f9fa;
@@ -264,7 +336,7 @@ p {
   text-align: left;
   background-color: white;
   margin: 0 15px;
-  padding: 50px 30px;
+  padding: 50px 40px;
 }
 .price h4 {
   font-family: "Raleway", sans-serif;
@@ -281,25 +353,33 @@ p {
   border-width: 1px 0 0 0;
   border-style: solid;
   border-color: #eeeff1;
+  line-height: 48px;
 }
 .price__purchase {
   background-color: #17daa3;
-  padding: 20px;
+  padding: 20px 35px;
   text-transform: uppercase;
-  font-family: "Proxima Nova", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: bold;
   font-size: 18px;
   display: flex;
   justify-content: space-between;
   align-content: center;
+  margin: 0 -40px -50px -40px;
+  transition: 0.3s;
+  letter-spacing: 0.2em;
 }
 .price__purchase img {
   max-height: 18px;
   max-width: 19px;
+  margin: auto 0;
 }
 .price__purchase p {
   padding: 0;
   color: white;
+}
+.price__purchase:hover {
+  background-color: #0ecf98;
 }
 
 #map {
@@ -311,6 +391,7 @@ p {
 }
 #map p {
   padding: 70px 0;
+  line-height: 36px;
 }
 
 .map__section {
@@ -333,6 +414,8 @@ p {
   padding: 20px;
   margin: 15px 0;
   width: 30vw;
+  font-family: "Raleway", sans-serif;
+  font-size: 15px;
 }
 #contact .form__button {
   background-color: #17daa3;
@@ -344,6 +427,9 @@ p {
   font-size: 14px;
   cursor: pointer;
   width: 10vw;
+}
+#contact .form__button:hover {
+  background-color: #0ecf98;
 }
 
 footer {
@@ -357,7 +443,21 @@ footer {
 }
 footer .name--color {
   color: #17daa3;
-  border-bottom: 2px dotted #17daa3;
+}
+footer a {
+  color: #87949e;
+  display: inline-block;
+}
+footer a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #17daa3;
+  transition: width 0.3s;
+}
+footer a:hover::after {
+  width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */
