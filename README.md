@@ -5,10 +5,11 @@
 http://natalialachacz.github.io/Alecto_website
 
 <h2>I used</h2>
-- HTML5
-- CSS3 (grid, flex)
-- Sass
-- wow.js
+- HTML5 <br>
+- CSS3 (grid, flex) <br>
+- Sass <br>
+- wow.js <br>
+- Unsplash (for photo) <br>
 
 <h1>PSD template</h1>
 <a href="https://symu.co/freebies/templates-4/alecto-psd-template/">Alecto</a>
