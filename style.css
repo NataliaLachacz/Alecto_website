@@ -9,15 +9,11 @@
   list-style-type: none;
 }
 
-/*@font-face {
-	font-family: 'montserrat Nova';
-	src: url('montserratNova_Thin.otf');
-	src: url('montserratNova_Light.otf');
-	//src: url('montserratNova_Regular.otf');
-	//src: url('montserrat-Nova-Regular.otf');
-}*/
 html {
   scroll-behavior: smooth;
+}
+
+body {
   letter-spacing: 0.025em;
 }
 
@@ -33,6 +29,11 @@ html {
   color: white;
   cursor: pointer;
   font-size: 40px;
+  transition: 0.3s;
+}
+
+#myBtn:hover {
+  background-color: #0ecf98;
 }
 
 header {
@@ -44,7 +45,7 @@ header {
   color: white;
   height: 100vh;
 }
-header i {
+header .icon__down {
   font-size: 50px;
   position: absolute;
   top: 90%;
@@ -82,8 +83,45 @@ nav {
 nav .logo__link::after {
   display: none;
 }
+nav .logo__link {
+  display: grid;
+  align-content: center;
+}
+nav #icon__nav {
+  color: white;
+  font-size: 50px;
+  display: none;
+}
 
-ul {
+#newMenu {
+  display: none;
+  background-color: rgba(0, 0, 0, 0.8);
+  font-size: 30px;
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  z-index: 5;
+  align-content: center;
+}
+#newMenu a {
+  color: white;
+  display: inline-block;
+  font-size: 6vw;
+}
+#newMenu a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #17daa3;
+  transition: width 0.3s;
+}
+#newMenu a:hover::after {
+  width: 100%;
+}
+
+.menu {
   display: flex;
 }
 
@@ -95,22 +133,22 @@ li {
   font-weight: bold;
 }
 
-#header__slider {
+#header__text {
   position: absolute;
   top: 40%;
   left: 50%;
   transform: translate(-50%);
   text-align: center;
 }
-#header__slider h1 {
+#header__text h1 {
   font-family: "Raleway", sans-serif;
   font-weight: lighter;
   font-size: 60px;
 }
-#header__slider h1 span {
+#header__text h1 span {
   font-weight: bold;
 }
-#header__slider p {
+#header__text p {
   font-family: "Montserrat", sans-serif;
   font-weight: 300;
   font-size: 24px;
@@ -123,7 +161,7 @@ li {
 }
 #about-us__icons {
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: repeat(4, 1fr);
 }
 #about-us__icons h3 {
   font-family: "Raleway", sans-serif;
@@ -131,6 +169,9 @@ li {
   font-weight: 400;
 }
 
+.about-us__icon {
+  padding: 0 30px;
+}
 .about-us__icon h3 {
   padding: 80px 0 40px 0;
 }
@@ -252,6 +293,10 @@ p {
   font-weight: 300;
 }
 
+.ssslide img {
+  display: inline !important;
+}
+
 #services {
   text-align: center;
   background-color: #f9f9fa;
@@ -259,7 +304,7 @@ p {
 }
 #services__sections {
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 1fr 1fr;
 }
 
 .services__section {
@@ -284,10 +329,16 @@ p {
   text-align: center;
   padding: 100px 0 0 0;
 }
+#team img {
+  width: 190%;
+  position: absolute;
+  top: -20%;
+  left: -50%;
+}
 
 #tiles {
   display: grid;
-  grid-template-columns: repeat(5, auto);
+  grid-template-columns: repeat(5, 1fr);
   overflow: hidden;
 }
 
@@ -295,6 +346,8 @@ p {
   background-color: #f9f9fa;
   width: 20vw;
   height: 20vw;
+  position: relative;
+  overflow: hidden;
 }
 
 .tiles__element:nth-child(even) {
@@ -329,7 +382,7 @@ p {
 
 #pricing__container {
   display: grid;
-  grid-template-columns: repeat(4, auto);
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .price {
@@ -382,10 +435,16 @@ p {
   background-color: #0ecf98;
 }
 
+.price:hover {
+  -webkit-box-shadow: 0px 0px 23px -7px #0ecf98;
+  -moz-box-shadow: 0px 0px 23px -7px #0ecf98;
+  box-shadow: 0px 0px 23px -7px #0ecf98;
+}
+
 #map {
   display: grid;
-  grid-template-columns: auto auto;
-  padding: 100px 0 100px 250px;
+  grid-template-columns: 40% 50%;
+  padding: 100px 0 100px 200px;
   grid-gap: 50px;
   justify-content: center;
 }
@@ -397,6 +456,9 @@ p {
 .map__section {
   display: grid;
   align-content: center;
+}
+.map__section img {
+  width: 100%;
 }
 
 #contact {
@@ -426,7 +488,7 @@ p {
   font-weight: bold;
   font-size: 14px;
   cursor: pointer;
-  width: 10vw;
+  transition: 0.3s;
 }
 #contact .form__button:hover {
   background-color: #0ecf98;
@@ -436,7 +498,7 @@ footer {
   display: flex;
   justify-content: space-between;
   align-content: center;
-  padding: 100px 250px;
+  padding: 100px 10%;
   color: #87949e;
   text-transform: uppercase;
   font-family: "Raleway", sans-serif;
@@ -458,6 +520,146 @@ footer a::after {
 }
 footer a:hover::after {
   width: 100%;
+}
+footer #footer__menu {
+  display: grid;
+  align-content: center;
+  justify-content: center;
+}
+footer #footer__menu ul {
+  display: flex;
+}
+
+@media only screen and (max-width: 650px) {
+  #about-us__icons {
+    grid-template-columns: 1fr !important;
+  }
+
+  .frame__photo {
+    display: none;
+  }
+
+  .services__section {
+    grid-template-areas: "ico" "title" "describe";
+    text-align: center;
+  }
+  .services__section img {
+    margin: 0 auto;
+    padding: 0 0 20px 0;
+  }
+
+  #pricing__container {
+    grid-template-columns: 1fr !important;
+  }
+
+  .map__section img {
+    display: none;
+  }
+
+  #footer__menu ul {
+    display: block;
+  }
+}
+@media only screen and (max-width: 890px) {
+  .button--border {
+    display: none;
+  }
+
+  header p {
+    display: none;
+  }
+  header nav {
+    justify-content: center;
+  }
+
+  #team #tiles {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #team .tiles__element {
+    width: 50vw;
+    height: 50vw;
+  }
+  #team .overlay__text {
+    font-size: 5vw;
+  }
+
+  #contact {
+    padding: 100px 10%;
+  }
+  #contact input, #contact textarea {
+    width: 50vw;
+  }
+
+  footer {
+    display: block;
+    text-align: center;
+  }
+  footer #footer__copyright {
+    margin-bottom: 30px;
+  }
+}
+@media only screen and (max-width: 1260px) {
+  header .menu {
+    display: none;
+  }
+  header #icon__nav {
+    display: block;
+  }
+
+  #opinions {
+    display: none;
+  }
+
+  #about-us__icons {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #frame1, #frame2 {
+    grid-template-areas: "info" "photo";
+  }
+  #frame1 img, #frame2 img {
+    width: 100%;
+  }
+
+  #services__sections {
+    grid-template-columns: 1fr;
+  }
+
+  .overlay__text {
+    font-size: 3vw;
+  }
+
+  #pricing {
+    padding: 100px 10px !important;
+  }
+  #pricing__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #pricing .price {
+    margin: 0 10% 100px 10%;
+  }
+
+  #map {
+    padding: 100px 10% !important;
+    grid-template-columns: 1fr;
+  }
+}
+@media only screen and (max-width: 1720px) {
+  #frame1, #frame2 {
+    padding: 150px 10%;
+  }
+
+  #services {
+    padding: 100px 10%;
+  }
+
+  #pricing {
+    padding: 100px 5%;
+  }
+
+  #map {
+    padding: 100px 0 100px 10%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

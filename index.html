@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<meta charset="utf-8">
 	<meta name="author" content="Natalia Łachacz">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Alecto</title>
 	<link rel="shortcut icon" href="img/ico.png">
 	
@@ -12,38 +12,46 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 	<link rel="stylesheet" href="src/animate.css">
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="sss/sss.css" type="text/css" media="all">	
 </head>
 <body>
 	<div id="container">
 	 <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-angle-up"></i></button> 
-<!-- <---------------------------------------- HEADER -------------------------------------->	
+	<div id="newMenu">
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="#about-us">About</a></li>
+			<li><a href="#frames">Work</a></li>
+			<li><a href="#services">Services</a></li>
+			<li><a href="#team">Team</a></li>
+			<li><a href="#contact">Contact</a></li>
+		</ul>				
+	</div>
+<!-- ---------------------------------------- HEADER ------------------------------------ -->	
 		<header>		
 			<nav>
 				<a class="logo__link" href="index.html"><img src="img/logo.png" alt="logo-img"></a>
-				
-				<ul>
+				<span id="icon__nav"><i class="fas fa-bars"></i></span>
+				<ul class="menu">
 					<li><a href="index.html">Home</a></li>
 					<li><a href="#about-us">About</a></li>
 					<li><a href="#frames">Work</a></li>
 					<li><a href="#services">Services</a></li>
 					<li><a href="#team">Team</a></li>
 					<li><a href="#contact">Contact</a></li>
-					<li><img src="img/search.png" alt="search-icon"></li>
 				</ul>
 			</nav>
 			
-			<div id="header__slider">
-				<div>
+			<div id="header__text">
 					<h1><span>Alecto</span> is simply PSD Template</h1>
 					<p>Nam varius accumsan elementum aliquam</p>
-				</div>
 			</div>
 			
-			<a href=""><button class="button--border">Learn more</button></a>
+			<a href="index.html"><button class="button--border">Learn more</button></a>
 			
-			<a href="#about-us"><i class="fas fa-angle-down"></i></a>
+			<a href="#about-us"><i class="fas fa-angle-down icon__down"></i></a>
 		</header>
-<!-- <---------------------------------------- ABOUT-US -------------------------------------->		
+<!-- ---------------------------------------- ABOUT-US ------------------------------------ -->		
 		<section id="about-us">
 			<h2>About us</h2>
 			<div class="underline"></div>
@@ -72,9 +80,9 @@
 				</div>
 			</div>
 			
-			<a href=""><button class="button--color">Learn more</button></a>			
+			<a href="index.html"><button class="button--color">Learn more</button></a>			
 		</section>
-<!-- <---------------------------------------- FRAMES_INFO -------------------------------------->		
+<!-- ---------------------------------------- FRAMES_INFO ------------------------------------ -->		
 		<section id="frames">
 			<div id="frame1">
 				<div class="frame__photo">
@@ -87,7 +95,7 @@
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque elementum augue sed est porttitor, ac blandit nisl posuere. Pellentesque hendrerit suscipit mi eu lobortis. Curabitur consectetur enim id elementum accumsan. Quisque metus purus, iaculis id tincidunt non, blandit quis sapien. 
 					</p>
 					
-					<a href=""><button class="button--color">Learn more</button></a>
+					<a href="index.html"><button class="button--color">Learn more</button></a>
 				</div>
 			</div>
 			
@@ -98,21 +106,33 @@
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque elementum augue sed est porttitor, ac blandit nisl posuere. Pellentesque hendrerit suscipit mi eu lobortis. Curabitur consectetur enim id elementum accumsan. Quisque metus purus, iaculis id tincidunt non, blandit quis sapien. 
 					</p>
 					
-					<a href=""><button class="button--color">Learn more</button></a>
+					<a href="index.html"><button class="button--color">Learn more</button></a>
 				</div>				
 				<div class="frame__photo">
 					<img src="https://source.unsplash.com/kPOia9E2dNI" alt="camera">
 				</div>
 			</div>			
 		</section>
-<!-- <---------------------------------------- OPINIONS -------------------------------------->					<section id="opinions">
-			<div id="opinions__slider">
-				<img src="img/ceo.png" alt="CEO-photo">
-				<h3><span>Alecto</span> lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
-				<span>Adam Czajkowski, CEO&Founder at symu.co</span>
+<!-- ---------------------------------------- OPINIONS ------------------------------------ -->					<section id="opinions">
+			<div id="opinions__slider" class="slider">
+				<div>
+					<img src="img/opinion1.png" alt="opinion-photo">
+					<h3><span>Alecto</span> lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
+					<span>Adam Czajkowski, CEO&Founder at symu.co</span>
+				</div>
+				<div>
+					<img src="img/opinion2.png" alt="opinion-photo">
+					<h3><span>Alecto</span> lorem ipsum dolor sit amet.</h3>
+					<span>Agata Nowak, CEO&Founder at symu.co</span>
+				</div>
+				<div>
+					<img src="img/opinion3.png" alt="opinion-photo">
+					<h3><span>Alecto</span> lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
+					<span>Rafał Kowalski, CEO&Founder at symu.co</span>
+				</div>				
 			</div>
 		</section>
-<!-- <---------------------------------------- SERVICES -------------------------------------->		
+<!-- ---------------------------------------- SERVICES ------------------------------------ -->		
 		<section id="services">
 			<h2>Our services</h2>
 			<div class="underline"></div>
@@ -145,7 +165,7 @@
 				</div>
 			</div>
 		</section>
-<!-- <---------------------------------------- TEAM -------------------------------------->				
+<!-- ---------------------------------------- TEAM ------------------------------------ -->				
 		<section id="team">
 			<h2>Meet our team</h2>
 			<div class="underline"></div>
@@ -153,58 +173,68 @@
 			
 			<div id="tiles">
 				<div class="tiles__element">
+					<img src="img/team1.jpeg" alt="team">					
 					<div class="overlay">
 						<div class="overlay__text">John Doe</div>
 					</div>
 				</div>
 				<div class="tiles__element">
+					<img src="img/team2.jpeg" alt="team">	
 					<div class="overlay">
 						<div class="overlay__text">John Doe</div>
 					</div>					
 				</div>
 				<div class="tiles__element">
+					<img src="img/team3.jpeg" alt="team">
 					<div class="overlay">
 						<div class="overlay__text">John Doe</div>
 					</div>					
 				</div>
 				<div class="tiles__element">
+					<img src="img/team4.jpeg" alt="team">
 					<div class="overlay">
 						<div class="overlay__text">John Doe</div>
 					</div>					
 				</div>
 				<div class="tiles__element">
+					<img src="img/team5.jpeg" alt="team">
 					<div class="overlay">
 						<div class="overlay__text">John Doe</div>
 					</div>					
 				</div>
 				<div class="tiles__element">
+					<img src="img/team6.jpeg" alt="team">
 					<div class="overlay">
 						<div class="overlay__text">John Doe</div>
 					</div>					
 				</div>
 				<div class="tiles__element">
+					<img src="img/team7.jpeg" alt="team">
 					<div class="overlay">
 						<div class="overlay__text">John Doe</div>
 					</div>					
 				</div>
 				<div class="tiles__element">
+					<img src="img/team8.jpeg" alt="team">
 					<div class="overlay">
 						<div class="overlay__text">John Doe</div>
 					</div>					
 				</div>
 				<div class="tiles__element">
+					<img src="img/team9.jpeg" alt="team">
 					<div class="overlay">
 						<div class="overlay__text">John Doe</div>
 					</div>					
 				</div>
 				<div class="tiles__element">
+					<img src="img/team10.jpg" alt="team">
 					<div class="overlay">
 						<div class="overlay__text">John Doe</div>
 					</div>					
 				</div>
 			</div>
 		</section>
-<!-- <---------------------------------------- PRICING -------------------------------------->			
+<!-- ---------------------------------------- PRICING ------------------------------------ -->			
 		<section id="pricing">
 			<h2>Pricing</h2>
 			<div class="underline"></div>
@@ -219,7 +249,7 @@
 					Lorem ipsum dolor sit amet consectetur adipiscing elit Ante sed interdum labortis Est nisi efficitur lactus
 					</p>
 					
-					<a href=""><div class="price__purchase">
+					<a href="index.html"><div class="price__purchase">
 						<p>purchase</p>
 						<img src="img/shop.png" alt="purchase-icon">
 					</div></a>
@@ -233,7 +263,7 @@
 					Lorem ipsum dolor sit amet consectetur adipiscing elit Ante sed interdum labortis Est nisi efficitur lactus
 					</p>
 					
-					<a href=""><div class="price__purchase">
+					<a href="index.html"><div class="price__purchase">
 						<p>purchase</p>
 						<img src="img/shop.png" alt="purchase-icon">
 					</div></a>
@@ -247,7 +277,7 @@
 					Lorem ipsum dolor sit amet consectetur adipiscing elit Ante sed interdum labortis Est nisi efficitur lactus
 					</p>
 					
-					<a href=""><div class="price__purchase">
+					<a href="index.html"><div class="price__purchase">
 						<p>purchase</p>
 						<img src="img/shop.png" alt="purchase-icon">
 					</div></a>
@@ -261,27 +291,27 @@
 					Lorem ipsum dolor sit amet consectetur adipiscing elit Ante sed interdum labortis Est nisi efficitur lactus
 					</p>
 					
-					<a href=""><div class="price__purchase">
+					<a href="index.html"><div class="price__purchase">
 						<p>purchase</p>
 						<img src="img/shop.png" alt="purchase-icon">
 					</div></a>
 				</div>
 			</div>
 		</section>
-<!-- <---------------------------------------- MAP -------------------------------------->				
+<!-- ---------------------------------------- MAP ------------------------------------ -->				
 		<section id="map">
 			<div class="map__section wow fadeInLeft">
 				<h2>Dolor sit amet</h2>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque elementum augue sed est porttitor, ac blandit nisl posuere. Pellentesque hendrerit suscipit mi eu lobortis. Curabitur consectetur enim id elementum accumsan. Quisque metus purus, iaculis id tincidunt non, blandit quis sapien. </p>
 
-				<a href=""><button class="button--color">Learn more</button></a>
+				<a href="index.html"><button class="button--color">Learn more</button></a>
 			</div>
 			
 			<div class="map__section">
 				<img src="img/map.png" alt="map-photo">
 			</div>
 		</section>
-<!-- <---------------------------------------- CONTACT -------------------------------------->					<section id="contact">
+<!-- ---------------------------------------- CONTACT ------------------------------------ -->					<section id="contact">
 			<h2>Contact us</h2>
 			<div class="underline"></div>
 			<p>Nam varius accumsan elementum. Aliquam fermentum eros in suscipit scelerisque.</p>
@@ -294,7 +324,7 @@
 				<input type="submit" name="submit" value="Submit" class="form__button">
 			</form>
 		</section>
-<!-- <---------------------------------------- FOOTER -------------------------------------->					<footer>
+<!-- ---------------------------------------- FOOTER ------------------------------------ -->							<footer>
 			<div id="footer__copyright">
 				<span>Copyright &copy; 2019 <a href="https://github.com/NataliaLachacz"><span class="name--color">Natalia Łachacz</span></a></span>
 			</div>
@@ -311,12 +341,15 @@
 			</div>
 		</footer>
 	</div>
-<!-- <---------------------------------------- SCRIPTS -------------------------------------->	
+<!-- ---------------------------------------- SCRIPTS ------------------------------------ -->	
 	<script src="js/script.js"></script>
 	<script src="js/wow.min.js"></script>
 		<script>
 			new WOW().init();
-		</script>	
+		</script>
 	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+	<script src="sss/sss.min.js"></script>
+	<script>jQuery(function($) {$('.slider').sss({slideShow : false, showNav : true});});</script>
 </body>
 </html>
