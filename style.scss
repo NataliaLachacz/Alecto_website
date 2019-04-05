@@ -114,7 +114,7 @@ nav {
 
 #newMenu {
 	display: none;
-	background-color: rgba(0,0,0,0.8);
+	background-color: rgba(0,0,0,.9);
 	font-size: 30px;
 	height: 100vh;
 	width: 100%;
@@ -397,25 +397,35 @@ p {
 	background-color: #e4e4e4;
 }
 
-.overlay {
-	width: 100%;
-	height: 100%;
-	background-color: $mint;
+.tiles__element .overlay {
+	position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 	opacity: 0;
-	transition: opacity 1s;	
-	display: grid;
-		
+    color: #FFF;
+	transition: 1s;
+	
 	&__text {
-		color: white;
 		font-size: 36px;
 		margin: auto 0;
 		font-family: $raleway;
-		font-weight: 200;
+		font-weight: 200;		
+		color: white;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		-webkit-transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
+		text-align: center;
 	}
 }
 
-.overlay:hover {
+.tiles__element:hover .overlay {
 	opacity: 1;
+    background: $mint;
 }
 
 #pricing {
@@ -594,8 +604,27 @@ footer {
 	}
 }
 
+@media only screen and (max-width: 450px) {	
+	#about-us {
+		padding: 100px 5%;
+	}
+	
+	.services__section {
+		h2 {
+			font-size: 3em;
+		}
+	}
+	
+	input, textarea {
+		width: 70vw !important;
+	}
+	
+	#myBtn {
+		display: none !important;
+	}
+}
 
-@media only screen and (max-width: 650px) {	
+@media only screen and (max-width: 720px) {	
 	
 	#about-us__icons {
 		grid-template-columns: 1fr !important;
@@ -629,12 +658,12 @@ footer {
 	
 	#footer__menu {
 		ul {
-			display: block;
+			display: block !important;
 		}
 	}
 }
 
-@media only screen and (max-width: 890px) {
+@media only screen and (max-width: 900px) {
 	.button--border {
 		display: none;
 	}
@@ -645,7 +674,8 @@ footer {
 		}
 		
 		nav {
-			justify-content: center;
+			justify-content: space-between;
+			padding: 50px 10%;
 		}
 	}
 	
@@ -676,6 +706,10 @@ footer {
 	footer {
 		display: block;
 		text-align: center;
+		
+		li {
+			padding: 5px 10px;
+		}
 		
 		#footer__copyright {
 			margin-bottom: 30px;
@@ -735,6 +769,10 @@ footer {
 	#map {
 		padding: 100px 10% !important;
 		grid-template-columns: 1fr;
+	}
+	
+	footer {
+		padding: 100px 5%;
 	}
 }
 
